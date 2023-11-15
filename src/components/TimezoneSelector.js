@@ -3,7 +3,7 @@ import React from 'react';
 
 const TimezoneSelector = ({ onChange }) => {
   // Replace with your actual list of timezones
-  const timezones = ['Asia/Kolkata', 'Europe/London', 'Africa/Johannesburg', 'America/Chicago'];
+  const timezones = ['Asia/Kolkata', 'Europe/London', 'Africa/Harare', 'America/Chicago'];
 
   return (
     <div>
