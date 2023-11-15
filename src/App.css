@@ -1,5 +1,8 @@
 .App {
-  text-align: center;
+  display: flex;
+  justify-content: space-around; /* or 'space-between' based on your preference */
+  align-items: center; /* or 'stretch' based on your preference */
+  height: 100vh; /* Adjust the height based on your design */
 }
 
 .App-logo {
