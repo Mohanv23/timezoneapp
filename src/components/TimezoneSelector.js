@@ -1,9 +1,10 @@
 // src/components/TimezoneSelector.js
 import React from 'react';
+import timezones from './timezones'; // Import the timezones object
 
-const TimezoneSelector = ({ onChange }) => {
+const TimezoneSelector = ({onChange }) => {
   // Replace with your actual list of timezones
-  const timezones = ['Asia/Kolkata', 'Europe/London', 'Africa/Harare', 'America/Chicago'];
+  const timezones = ['Asia/Kolkata','Europe/London','Africa/Johannesburg','America/Chicago']
 
   return (
     <div>

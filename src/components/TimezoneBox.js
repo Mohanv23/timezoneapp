@@ -4,7 +4,7 @@ import TimezoneSelector from './TimezoneSelector';
 import TimeDisplay from './TimeDisplay';
 import TimeEditor from './TimeEditor';
 
-const TimezoneBox = () => {
+const TimezoneBox = ({ sharedAddHours, sharedAddMinutes}) => {
   const [selectedTimezone, setSelectedTimezone] = useState('Asia/Kolkata'); // Default timezone
   const [localTime, setLocalTime] = useState(new Date());
   const [addHours, setAddHours] = useState(0);
@@ -34,30 +34,46 @@ const TimezoneBox = () => {
 
   const handleHourChange = (event) => {
     setAddHours(parseInt(event.target.value, 10) || 0);
+    //setSharedAddHours(parseInt(event.target.value, 10) || 0);
   };
 
   const handleMinuteChange = (event) => {
     setAddMinutes(parseInt(event.target.value, 10) || 0);
+    //setSharedAddMinutes(parseInt(event.target.value, 10) || 0);
+
   };
 
   const updatedTime = calculateUpdatedTime();
   const futureTime = new Date(updatedTime);
 
+  
   return (
-    <div>
-      <TimezoneSelector onChange={handleTimezoneChange} />
-      {/* <TimeDisplay timezone={selectedTimezone} currentTime={localTime.toLocaleString('en-US', { timeZone: selectedTimezone, hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true })} /> */}
-      
-      <div>        
-        <p>Current Time: {localTime.toLocaleString('en-US', { timeZone: selectedTimezone, hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true })}</p>
-      </div>
-      {addHours !==0 || addMinutes !==0 ? (
-        <div>          
-          <p>Future Time: {futureTime.toLocaleString('en-US', { timeZone: selectedTimezone, hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true })}</p>
+    <div className='card mt-4'>
+      <div className='card-body'>        
+        <TimezoneSelector onChange={handleTimezoneChange} />
+        <div className='mt -3'>
+        <TimeDisplay 
+            timezone={selectedTimezone} 
+            currentTime={localTime.toLocaleString('en-US', { 
+              timeZone: selectedTimezone, 
+              hour: 'numeric', 
+              minute: 'numeric', 
+              second: 'numeric', 
+              hour12: true })} />
         </div>
-      ): null}
-      <TimeEditor onHourChange={handleHourChange} onMinuteChange={handleMinuteChange} />
-    </div>
+        <div className="mt-3">
+          <p>Current Time: {localTime.toLocaleString('en-US', { timeZone: selectedTimezone, hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true })}</p>
+        </div>
+
+        {addHours !== 0 || addMinutes !== 0 ? (
+          <div className="mt-3">
+            <p>Future Time: {futureTime.toLocaleString('en-US', { timeZone: selectedTimezone, hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true })}</p>
+          </div>
+        ) : null}
+
+        <TimeEditor onHourChange={handleHourChange} onMinuteChange={handleMinuteChange} />
+      </div>
+    </div>    
   );
 };
 
