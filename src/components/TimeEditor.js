@@ -4,8 +4,8 @@ import '../../src/styles/Timestyle.css';
 
 const TimeEditor = ({ onHourChange, onMinuteChange }) => {
   return (
-    <div className='time-editor mt-5'>
-      <label>Set</label>
+    <div className='time-editor mt-1'>
+      <label>Add</label>
       <label>Hr:</label>
       <input type="number" min="0" onChange={onHourChange} />
       <label>Min:</label>

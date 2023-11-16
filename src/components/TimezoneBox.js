@@ -60,19 +60,13 @@ const TimezoneBox = ({ sharedAddHours, sharedAddMinutes}) => {
   const timeOfDayImage = getTimeOfDayImage(selectedTimezone);
 
 
+
   return (
-    <div className='card mt-4'>
+    <div className="card mt-5">
       <div className='card-body'>        
         <TimezoneSelector onChange={handleTimezoneChange} />
-        <div className='mt -3'>
-        <TimeDisplay 
-            timezone={selectedTimezone} 
-            currentTime={localTime.toLocaleString('en-US', { 
-              timeZone: selectedTimezone, 
-              hour: 'numeric', 
-              minute: 'numeric', 
-              second: 'numeric', 
-              hour12: true })} />
+        <div className='mt-1'>
+        <TimeDisplay timezone={selectedTimezone} />
         </div>        
 
         <div className="mt-3">
@@ -81,7 +75,7 @@ const TimezoneBox = ({ sharedAddHours, sharedAddMinutes}) => {
         </div>
 
         {addHours !== 0 || addMinutes !== 0 ? (
-          <div className="mt-3">
+          <div>
             <p>Future Time: {futureTime.toLocaleString('en-US', { timeZone: selectedTimezone, hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true })}</p>
           </div>
         ) : null}
