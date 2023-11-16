@@ -5,7 +5,7 @@ import TimeDisplay from './TimeDisplay';
 import TimeEditor from './TimeEditor';
 import { URL } from 'url';
 
-const TimezoneBox = ({ sharedAddHours, sharedAddMinutes}) => {
+const TimezoneBox = ({ sharedAddHours, sharedAddMinutes }) => {
   const [selectedTimezone, setSelectedTimezone] = useState('Asia/Kolkata'); // Default timezone
   const [localTime, setLocalTime] = useState(new Date());
   const [addHours, setAddHours] = useState(0);
@@ -34,7 +34,7 @@ const TimezoneBox = ({ sharedAddHours, sharedAddMinutes}) => {
   };
 
   const handleHourChange = (event) => {
-    setAddHours(parseInt(event.target.value, 10) || 0);    
+    setAddHours(parseInt(event.target.value, 10) || 0);
   };
 
   const handleMinuteChange = (event) => {
@@ -46,15 +46,16 @@ const TimezoneBox = ({ sharedAddHours, sharedAddMinutes}) => {
 
   const getTimeOfDayImage = (timezone) => {
     const hour = new Date().toLocaleString('en-US', { timeZone: timezone, hour: 'numeric', hour12: false });
-    const baseImageUrl = process.env.PUBLIC_URL + '/timezone-app/images/';
+    const baseImageUrl = process.env.PUBLIC_URL + '/images';
+    
     if (hour >= 5 && hour < 12) {
-      return 'morning.jpg';
+      return baseImageUrl + '/morning.jpg';
     } else if (hour >= 12 && hour < 17) {
-      return 'afternoon.jpg';
+      return baseImageUrl + '/afternoon.jpg';
     } else if (hour >= 17 && hour < 20) {
-      return 'evening.jpg';
+      return baseImageUrl + '/evening.jpg';
     } else {
-      return 'night.jpg';
+      return baseImageUrl + '/night.jpg';
     }
   };
 
@@ -64,15 +65,15 @@ const TimezoneBox = ({ sharedAddHours, sharedAddMinutes}) => {
 
   return (
     <div className="card mt-5">
-      <div className='card-body'>        
+      <div className='card-body'>
         <TimezoneSelector onChange={handleTimezoneChange} />
         <div className='mt-1'>
-        <TimeDisplay timezone={selectedTimezone} />
-        </div>        
+          <TimeDisplay timezone={selectedTimezone} />
+        </div>
 
         <div className="mt-3">
           <p>Current Time: {localTime.toLocaleString('en-US', { timeZone: selectedTimezone, hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true })}</p>
-          <img src={`/images/${timeOfDayImage}`} alt="Time of Day" style={{ maxWidth: '100%', margin: '5px' }} />
+          <img src={`${timeOfDayImage}`} alt="Time of Day" style={{ maxWidth: '100%', margin: '5px' }} />
         </div>
 
         {addHours !== 0 || addMinutes !== 0 ? (
@@ -80,10 +81,10 @@ const TimezoneBox = ({ sharedAddHours, sharedAddMinutes}) => {
             <p>Future Time: {futureTime.toLocaleString('en-US', { timeZone: selectedTimezone, hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true })}</p>
           </div>
         ) : null}
-              
+
         <TimeEditor onHourChange={handleHourChange} onMinuteChange={handleMinuteChange} />
       </div>
-    </div>    
+    </div>
   );
 };
 
