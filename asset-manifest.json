@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/timezone-app/static/css/main.44656ebc.css",
-    "main.js": "/timezone-app/static/js/main.1643755c.js",
-    "static/js/787.582f7088.chunk.js": "/timezone-app/static/js/787.582f7088.chunk.js",
-    "index.html": "/timezone-app/index.html",
-    "main.44656ebc.css.map": "/timezone-app/static/css/main.44656ebc.css.map",
-    "main.1643755c.js.map": "/timezone-app/static/js/main.1643755c.js.map",
-    "787.582f7088.chunk.js.map": "/timezone-app/static/js/787.582f7088.chunk.js.map"
+    "main.css": "/timezoneapp/static/css/main.44656ebc.css",
+    "main.js": "/timezoneapp/static/js/main.366f2b48.js",
+    "static/js/787.582f7088.chunk.js": "/timezoneapp/static/js/787.582f7088.chunk.js",
+    "index.html": "/timezoneapp/index.html",
+    "main.44656ebc.css.map": "/timezoneapp/static/css/main.44656ebc.css.map",
+    "main.366f2b48.js.map": "/timezoneapp/static/js/main.366f2b48.js.map",
+    "787.582f7088.chunk.js.map": "/timezoneapp/static/js/787.582f7088.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.44656ebc.css",
-    "static/js/main.1643755c.js"
+    "static/js/main.366f2b48.js"
   ]
 }
