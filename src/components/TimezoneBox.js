@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import TimezoneSelector from './TimezoneSelector';
 import TimeDisplay from './TimeDisplay';
 import TimeEditor from './TimeEditor';
-
+import { URL } from 'url';
 
 const TimezoneBox = ({ sharedAddHours, sharedAddMinutes}) => {
   const [selectedTimezone, setSelectedTimezone] = useState('Asia/Kolkata'); // Default timezone
@@ -46,6 +46,7 @@ const TimezoneBox = ({ sharedAddHours, sharedAddMinutes}) => {
 
   const getTimeOfDayImage = (timezone) => {
     const hour = new Date().toLocaleString('en-US', { timeZone: timezone, hour: 'numeric', hour12: false });
+    const baseImageUrl = process.env.PUBLIC_URL + '/timezone-app/images/';
     if (hour >= 5 && hour < 12) {
       return 'morning.jpg';
     } else if (hour >= 12 && hour < 17) {
