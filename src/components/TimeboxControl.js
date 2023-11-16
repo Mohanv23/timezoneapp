@@ -31,8 +31,7 @@ const TimeboxControl = ({ onUpdate }) => {
       <h2>Timebox Control</h2>
       <div>
         <label>Select Timezone: </label>
-        <select onChange={handleTimezoneChange} value={selectedTimezone}>
-          {/* Add your timezone options here */}
+        <select onChange={handleTimezoneChange} value={selectedTimezone}>          
         </select>
       </div>
       <div>

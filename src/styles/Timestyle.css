@@ -1,0 +1,20 @@
+/* TimeEditor.css */
+.time-editor {
+    display: contents;
+    align-items: left;
+    justify-content: space-between;
+    max-width: 2px;
+    margin: 1px;
+  }
+  
+  .time-editor label {
+    flex: 1;
+    margin-right: 5px;
+    margin-left: 5px;
+  }
+  
+  .time-editor input {
+    flex: 1;
+    max-width: 50px;
+  }
+  
