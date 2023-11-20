@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/timezoneapp/static/css/main.9306132d.css",
+    "main.css": "/timezoneapp/static/css/main.9050c6d3.css",
     "main.js": "/timezoneapp/static/js/main.d1968803.js",
     "static/js/787.582f7088.chunk.js": "/timezoneapp/static/js/787.582f7088.chunk.js",
-    "static/media/bgmap.jpg": "/timezoneapp/static/media/bgmap.70ec4597327de9bcc946.jpg",
+    "static/media/bgmap.jpg": "/timezoneapp/static/media/bgmap.ee0da7d0d44a33cdf149.jpg",
     "index.html": "/timezoneapp/index.html",
-    "main.9306132d.css.map": "/timezoneapp/static/css/main.9306132d.css.map",
+    "main.9050c6d3.css.map": "/timezoneapp/static/css/main.9050c6d3.css.map",
     "main.d1968803.js.map": "/timezoneapp/static/js/main.d1968803.js.map",
     "787.582f7088.chunk.js.map": "/timezoneapp/static/js/787.582f7088.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9306132d.css",
+    "static/css/main.9050c6d3.css",
     "static/js/main.d1968803.js"
   ]
 }
