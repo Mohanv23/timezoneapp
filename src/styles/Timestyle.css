@@ -1,20 +1,20 @@
 /* TimeEditor.css */
 .time-editor {
-    display: flex;
-    align-items: left;
-    justify-content: space-between;
-    max-width: 5px;
-    margin: 5px;
-  }
-  
-  .time-editor label {
-    flex: 1;
-    margin-right: 5px;
-    margin-left: 5px;
-  }
-  
-  .time-editor input {
-    flex: 1;
-    max-width: 50px;
-  }
-  
+  display: flex;
+  justify-content: space-between;
+  max-width: 100%;
+  margin: 5px;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+}
+
+.input-group label {
+  margin-right: 3px;
+}
+
+.input-group input {
+  max-width: 50px; /* You can adjust the width as needed */
+}

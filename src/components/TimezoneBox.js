@@ -73,7 +73,7 @@ const TimezoneBox = ({ sharedAddHours, sharedAddMinutes }) => {
 
         <div className="mt-3">
           <p>Current Time: {localTime.toLocaleString('en-US', { timeZone: selectedTimezone, hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true })}</p>
-          <img src={`${timeOfDayImage}`} alt="Time of Day" style={{ maxWidth: '100%', margin: '5px' }} />
+          <img src={`${timeOfDayImage}`} alt="Time of Day" style={{ maxWidth: '100%', margin: '10px'}} />
         </div>
 
         {addHours !== 0 || addMinutes !== 0 ? (
